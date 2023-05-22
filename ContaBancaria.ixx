@@ -17,7 +17,6 @@ public:
 	std::string const& numero_conta() { return _numero_conta; }
 	bool sacar(double valor_saque);
 	ContaBancaria& depositar(double valor_deposito);
-	//friend std::ostream& operator<<(std::ostream& cout, ContaBancaria const& conta);
 };
 
 bool ContaBancaria::sacar(double valor_saque)
@@ -35,10 +34,3 @@ ContaBancaria& ContaBancaria::depositar(double valor_deposito)
 	_saldo += valor_deposito;
 	return (*this);
 }
-
-//std::ostream& operator<<(std::ostream& cout, ContaBancaria const& conta) {
-//	std::cout << conta._cliente
-//		<< "\nNumero conta: " << conta._numero_conta
-//		<< "\nSaldo: " << conta._saldo << '\n';
-//	return cout;
-//}
